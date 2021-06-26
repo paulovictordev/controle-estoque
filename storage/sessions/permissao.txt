@@ -1,0 +1,3 @@
+Caso de problema nas permissões da seção:
+
+Na raiz: chmod -R 777 storage/sessions

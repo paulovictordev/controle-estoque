@@ -7,6 +7,9 @@ Execute o conteúdo arquivo `script.sql`, para obter a estrutura do banco.
 ## Configuração do Banco
 Alterar o arquivo `/Support/Config.php`
 
+## Configuração do Sessão
+Da permissão de escrita em `/storage/sessions/`
+
 ## Usuários de Acesso
 Email|Senha
 --- | ---

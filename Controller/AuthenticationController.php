@@ -23,7 +23,7 @@ class AuthenticationController extends AbstractController
             die("Usuário ou Senha incorretos.");
         }
 
-        if(passwd_verify($_POST['password'], $usuario->senha)) {
+        if(!passwd_verify($_POST['password'], $usuario->senha)) {
             die("Usuário ou Senha incorretos.");
         }
 

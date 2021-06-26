@@ -1,0 +1,30 @@
+<h1>Lista de Produtos</h1>
+
+<table class="table table-striped table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Peso</th>
+        <th>Quantidade Minima</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+    /** @var \Project\Models\Produto $product */
+    foreach($products as $product) {
+        echo "<tr>
+                <td>{$product->id}</td>
+                <td>{$product->descricao}</td>
+                <td>{$product->peso} kg</td>
+                <td>{$product->qtd_minima}</td>
+                <td>
+                    <a href='/produto/editar?id={$product->id}' class='btn btn-info btn-sm'>Editar</a>    
+                    <a href='/produto/remover?id={$product->id}' class='btn btn-danger btn-sm'>Excluir</a>    
+                </td>
+            </tr>";
+    }
+    ?>
+    </tbody>
+</table>

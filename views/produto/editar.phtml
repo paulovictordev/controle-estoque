@@ -1,0 +1,36 @@
+<h1>Editar Produto</h1>
+
+<form action="" method="post">
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" value="<?=$product->descricao?>" placeholder="Nome do Produto" class="form-control" required>
+    <br>
+    <label for="peso">Peso</label>
+    <input type="number" name="peso" id="peso" value="<?=$product->peso?>" placeholder="Peso" class="form-control" required>
+    <br>
+    <label for="quantidade">Quantidade Mínima</label>
+    <input type="number"name="quantidade" id="quantidade" value="<?=$product->qtd_minima?>" placeholder="Quantidade Mínima" class="form-control" required></input>
+    <br>
+    <label for="categoria">Categoria do Produto</label>
+    <select class="form-select" name="categoria" aria-label="Categoria do Produto">
+        <option value="<?=$category->id?>"><?=$category->categoria?></option>
+        <?php
+            foreach ($categories as $category) {
+                echo "<option value='{$category->id}'>{$category->categoria}</option>";
+            }
+        ?>
+    </select>
+    <br>
+    <label for="fornecedor">Fornecedor do Produto</label>
+    <select class="form-select" name="fornecedor" aria-label="Fornecedor do Produto">
+        <option value="<?=$supplier->id?>"><?=$supplier->fornecedor?></option>
+        <?php
+            foreach ($suppliers as $supplier) {
+                echo "<option value='{$supplier->id}'>{$supplier->fornecedor}</option>";
+            }
+        ?>
+    </select>
+    <br>
+
+    <button class="btn btn-danger">ENVIAR</button>
+</form>
+<hr>
